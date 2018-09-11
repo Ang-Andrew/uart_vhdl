@@ -2,5 +2,5 @@
 2018.1
 Apr  4 2018
 19:30:32
-D:/git_repos/uart/uart.srcs/sim_1/new/uart_rx_tb.vhd,1536470046,vhdl,,,,uart_rx_tb,,,,,,,,
-D:/git_repos/uart/uart.srcs/sources_1/new/uart_rx.vhd,1536469679,vhdl,,,,uart_rx,,,,,,,,
+D:/git_repos/uart/vivado/uart.srcs/sim_1/new/uart_tx_tb.vhd,1536668376,vhdl,,,,uart_tx_tb,,,,,,,,
+D:/git_repos/uart/vivado/uart.srcs/sources_1/new/uart_tx.vhd,1536668621,vhdl2008,,,,uart_tx,,,,,,,,

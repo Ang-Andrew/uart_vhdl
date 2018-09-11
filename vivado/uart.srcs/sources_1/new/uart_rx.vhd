@@ -30,7 +30,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity uart_rx is
     generic(
-        cycles_per_bit  : integer := 868
+        cycles_per_bit  : integer := 868 -- 100MHz/115200baud
     );
     Port (
         clock           : in std_logic;
@@ -78,7 +78,7 @@ begin
                     end if;
                 
                 when s_start    =>
-                    if(s_serial_in_reg = '0') then -- start condition
+                    if(s_serial_in_reg = '0') then -- st sart condition
                         s_cycle_counter <= s_cycle_counter + 1;
                         if(s_cycle_counter = cycles_per_bit-1) then
                             s_cycle_counter <= 0;
