@@ -1,0 +1,58 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/git_repos/uart/cocotb/sim_build
+T_opt
+Z1 !s110 1537186747
+V9gM?O0MLKi;@=j]77ec?11
+04 7 10 work uart_tx behavioral 1
+=1-d0509947e919-5b9f9bbb-131-14b0
+o-quiet -auto_acc_if_foreign -work work
+tCvgOpt 0
+n@_opt
+OL;O;10.5;63
+Euart_tx
+Z2 w1536668621
+Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z4 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+R0
+Z5 8D:/git_repos/uart/cocotb/../source/uart_tx.vhd
+Z6 FD:/git_repos/uart/cocotb/../source/uart_tx.vhd
+l0
+L34
+Vd_6KRNdBXBAF[:[c6?:d>1
+!s100 oBKc@BTi]:gC2OEU2]A3h0
+Z7 OL;C;10.5;63
+32
+R1
+!i10b 1
+Z8 !s108 1537186746.000000
+Z9 !s90 -reportprogress|300|-work|work|D:/git_repos/uart/cocotb/../source/uart_tx.vhd|
+Z10 !s107 D:/git_repos/uart/cocotb/../source/uart_tx.vhd|
+!i113 0
+Z11 o-work work
+Z12 tExplicit 1 CvgOpt 0
+Abehavioral
+R3
+R4
+DEx4 work 7 uart_tx 0 22 d_6KRNdBXBAF[:[c6?:d>1
+l60
+L49
+Vi[`o8m9=1T0lQeT@Uz;331
+!s100 3R3bW6obMJi4SdPB^PbUd0
+R7
+32
+R1
+!i10b 1
+R8
+R9
+R10
+!i113 0
+R11
+R12
