@@ -1,0 +1,7 @@
+<testsuites name="results">
+  <testsuite name="all" package="all" tests="0">
+    <testcase classname="test_uart_tx" name="uart_tx_test" ratio_time="21.21284127285449" sim_time_ns="101.0" time="4.7612669467926025">
+      <failure stderr="" stdout="'Send raised exception: uart_tx contains no object named data_in'" />
+    </testcase>
+  </testsuite>
+</testsuites>

@@ -1,18 +1,35 @@
 # Simple tests for an adder module
 import cocotb
-from cocotb.triggers import Timer
+from cocotb.clock import Clock
+from cocotb.triggers import Timer, RisingEdge
 from cocotb.result import TestFailure
-from adder_model import adder_model
 import random
 
 @cocotb.test()
 def uart_tx_test(dut):
-    dut._log.info("Running UART TX test!")
-    for cycle in range(10):
-        dut.clock = 0
-        yield Timer(1000)
-        dut.clock = 1
-        yield Timer(1000)
-    dut._log.info("Running test!")
+    print('Started UART TX test')
     
+    # Generate clock signal with frequency of 100 MHz
+    cocotb.fork(Clock(dut.clock,10).start())
+    
+    # Drive reset line high, wait then drive low
+    dut.reset <= 1
+    yield Timer(100)
+    dut.reset <= 0
+    
+    # Send data to be sent to UART TX module with valid data input
+    
+    dut.data_in <= 0xaf
+    dut.data_valid <= 1
+    
+    # Print out serial stream out
+    
+    yield Timer(100*868*8)
+    
+    print('Simulation ended')
+    
+    
+    
+  
 
+        

@@ -20,35 +20,95 @@
 # vmap work work 
 # Modifying modelsim.ini
 # Model Technology ModelSim SE-64 vcom 10.5 Compiler 2016.02 Feb 13 2016
-# Start time: 22:19:06 on Sep 17,2018
+# Start time: 21:58:33 on Sep 18,2018
 # vcom -reportprogress 300 -work work D:/git_repos/uart/cocotb/../source/uart_tx.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity uart_tx
 # -- Compiling architecture Behavioral of uart_tx
-# End time: 22:19:07 on Sep 17,2018, Elapsed time: 0:00:01
+# End time: 21:58:33 on Sep 18,2018, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # ** Warning: (vsim-159) Mode option -64 is not supported in this context and will be ignored.
 # vsim -onfinish stop -foreign "cocotb_init libfli.dll" work.uart_tx 
-# Start time: 22:19:07 on Sep 17,2018
+# Start time: 21:58:33 on Sep 18,2018
 # ** Note: (vsim-3812) Design is being optimized...
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
 # Loading work.uart_tx(behavioral)#1
 # Loading libfli.dll
+find drivers -source -time {20388 ns} -cause {}
 #   0.00ns INFO     cocotb.gpi                                  gpi_embed.c:248  in embed_sim_init                  Running on ModelSim SE-64 version 10.5 2016.02
 # 
 #   0.00ns INFO     cocotb.gpi                                  gpi_embed.c:249  in embed_sim_init                  Python interpreter initialised and cocotb loaded!
 # 
 #   0.00ns INFO     cocotb                                      __init__.py:115  in _initialise_testbench           Running tests with Cocotb v1.0 from C:/cocotb-6c432ee73
 # 
-#   0.00ns INFO     cocotb                                      __init__.py:131  in _initialise_testbench           Seeding Python random module with 1537186750
+#   0.00ns INFO     cocotb                                      __init__.py:131  in _initialise_testbench           Seeding Python random module with 1537271922
 # 
-#   0.00ns CRITICAL cocotb.regression                         regression.py:120  in initialise                      Failed to import module test_uart_tx
+#   0.00ns INFO     cocotb.regression                         regression.py:167  in initialise                      Found test test_uart_tx.uart_tx_test
 # 
-#   0.00ns INFO     cocotb.regression                         regression.py:122  in initialise                      MODULE variable was "test_uart_tx"
+#   0.00ns INFO     cocotb.regression                         regression.py:287  in execute                         Running test 1/1: uart_tx_test
 # 
-# End time: 22:19:10 on Sep 17,2018, Elapsed time: 0:00:03
-# Errors: 0, Warnings: 1
+#   0.00ns INFO     ...coroutine.uart_tx_test.0x664d7f0       decorators.py:191  in send                            Starting test: "uart_tx_test"
+# 
+#                                                                                                                   Description: None
+# 
+run -all
+# Started UART TX test
+# 
+# 100.00ns ERROR    ...coroutine.uart_tx_test.0x664d7f0           result.py:51   in raise_error                     Send raised exception: uart_tx contains no object named data_in
+# 
+#                                                                                                                     File "C:\cocotb-6c432ee73\cocotb\decorators.py", line 197, in send
+# 
+#                                                                                                                       return self._coro.send(value)
+# 
+#                                                                                                                     File "D:\git_repos\uart\cocotb\test_uart_tx.py", line 22, in uart_tx_test
+# 
+#                                                                                                                       dut.data_in <= 0xaf
+# 
+#                                                                                                                     File "C:\cocotb-6c432ee73\cocotb\handle.py", line 261, in __getattr__
+# 
+#                                                                                                                       raise AttributeError("%s contains no object named %s" % (self._name, name))
+# 
+#                                                                                                                   
+# 
+# 101.00ns ERROR    cocotb.regression                         regression.py:263  in handle_result                   Test Failed: uart_tx_test (result was TestError)
+# 
+# 101.00ns ERROR    cocotb.regression                         regression.py:173  in tear_down                       Failed 1 out of 1 tests (0 skipped)
+# 
+# 101.00ns INFO     cocotb.regression                         regression.py:341  in _log_test_summary               ***********************************************************************************
+# 
+#                                                                                                                   ** TEST                       PASS/FAIL  SIM TIME(NS)  REAL TIME(S)  RATIO(NS/S) **
+# 
+#                                                                                                                   ***********************************************************************************
+# 
+#                                                                                                                   ** test_uart_tx.uart_tx_test    FAIL          101.00          4.76        21.21  **
+# 
+#                                                                                                                   ***********************************************************************************
+# 
+#                                                                                                                   
+# 
+# 101.00ns INFO     cocotb.regression                         regression.py:358  in _log_sim_summary                *************************************************************************************
+# 
+#                                                                                                                   **                                 ERRORS : 1                                      **
+# 
+#                                                                                                                   *************************************************************************************
+# 
+#                                                                                                                   **                               SIM TIME : 101.00 NS                              **
+# 
+#                                                                                                                   **                              REAL TIME : 4.77 S                                 **
+# 
+#                                                                                                                   **                        SIM / REAL TIME : 21.17 NS/S                             **
+# 
+#                                                                                                                   *************************************************************************************
+# 
+#                                                                                                                   
+# 
+# 101.00ns INFO     cocotb.regression                         regression.py:184  in tear_down                       Shutting down...
+# 
+# Simulation halt requested by foreign interface.
+# Causality operation skipped due to absence of debug database file
+# End time: 21:59:35 on Sep 18,2018, Elapsed time: 0:01:02
+# Errors: 0, Warnings: 2
